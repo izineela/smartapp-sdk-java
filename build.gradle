@@ -41,3 +41,5 @@ task preCommit(type: GradleBuild) {
     // SpotBugs errors that aren't currently ignored.
     tasks = ['check', 'test', 'jacocoTestReport', 'spotbugsMain', 'githubJavadoc']
 }
+
+task stage(dependsOn: ['build', 'clean'])
